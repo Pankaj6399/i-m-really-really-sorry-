@@ -2,14 +2,14 @@
 
 <html>
 <head>
-<title>Secret Message</title>
+<title>Happy Birthday!</title>
 <style>
 body{
-    background:black;
-    color:white;
+    margin:0;
+    background:linear-gradient(135deg,#ff6b6b,#feca57);
     font-family:Arial,sans-serif;
     text-align:center;
-    margin:0;
+    color:white;
     height:100vh;
     display:flex;
     justify-content:center;
@@ -17,61 +17,29 @@ body{
     flex-direction:column;
 }
 
-#surprise{
-display:none;
+h1{
+font-size:60px;
+margin:10px;
 }
 
-img{
-width:400px;
-max-width:90%;
-border-radius:15px;
+p{
+font-size:24px;
 }
 
-.loading{
-font-size:40px;
-}
-
-.bar{
-width:300px;
-height:20px;
-border:2px solid white;
-margin-top:20px;
-}
-
-.progress{
-width:0%;
-height:100%;
-background:lime;
-animation:load 5s linear forwards;
-}
-
-@keyframes load{
-from{width:0%;}
-to{width:100%;}
+.cake{
+font-size:100px;
 } </style>
 
 </head>
 <body>
 
-<div id="loading">
-    <div class="loading">Loading Secret Message...</div>
-    <div class="bar">
-        <div class="progress"></div>
-    </div>
-</div>
+<div class="cake">🎂</div>
 
-<div id="surprise">
-    <img src="https://images.unsplash.com/photo-1545468800-85cc9bc6ecf7?w=800">
-    <h1>😂 GOTCHA! 😂</h1>
-    <h2>You have been officially identified.</h2>
-</div>
+<h1>Happy Birthday!</h1>
 
-<script>
-setTimeout(function(){
-    document.getElementById("loading").style.display="none";
-    document.getElementById("surprise").style.display="block";
-},5000);
-</script>
+<p>Wishing you happiness, success, and lots of cake today! 🎉🎁🎈</p>
+
+<h2>Have an amazing year ahead! ❤️</h2>
 
 </body>
 </html>
