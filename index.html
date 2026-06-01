@@ -1,51 +1,77 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-<title>I'm Really Sorry</title>
+<title>Secret Message</title>
 <style>
 body{
+    background:black;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
     margin:0;
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#ff758c,#ff7eb3);
-    font-family:Arial,sans-serif;
-    text-align:center;
-    color:white;
+    flex-direction:column;
 }
-.container{
-    padding:30px;
-}
-h1{
-    font-size:50px;
-}
-p{
-    font-size:22px;
-}
-button{
-    padding:12px 25px;
-    font-size:18px;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-}
-</style>
-</head>
 
+#surprise{
+display:none;
+}
+
+img{
+width:400px;
+max-width:90%;
+border-radius:15px;
+}
+
+.loading{
+font-size:40px;
+}
+
+.bar{
+width:300px;
+height:20px;
+border:2px solid white;
+margin-top:20px;
+}
+
+.progress{
+width:0%;
+height:100%;
+background:lime;
+animation:load 5s linear forwards;
+}
+
+@keyframes load{
+from{width:0%;}
+to{width:100%;}
+} </style>
+
+</head>
 <body>
 
-<script>
-window.onload = function() {
-    alert("I AM SORRY FOR calling immature immature");
-};
-</script>
-
-<div class="container">
-    <h1>💖 I'm Really Sorry 💖</h1>
-    <p>Please forgive me.</p>
-    <button onclick="alert('Thank you ❤️')">Forgive Me</button>
+<div id="loading">
+    <div class="loading">Loading Secret Message...</div>
+    <div class="bar">
+        <div class="progress"></div>
+    </div>
 </div>
+
+<div id="surprise">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Donkey_1_arp_750px.jpg">
+    <h1>😂 GOTCHA! 😂</h1>
+    <h2>You have been officially identified.</h2>
+</div>
+
+<script>
+setTimeout(function(){
+    document.getElementById("loading").style.display="none";
+    document.getElementById("surprise").style.display="block";
+},5000);
+</script>
 
 </body>
 </html>
